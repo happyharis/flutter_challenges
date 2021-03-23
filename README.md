@@ -1,6 +1,11 @@
 # flutter_challenges
 
-A new Flutter project.
+Flutter challenges for the [Learn Flutter Pro Group](https://learnfluttercode.com/pro-group).
+
+[Fashion Profile Page](https://github.com/happyharis/flutter_challenges/blob/master/lib/1_fashion_profile/profile_page.dart) |
+--- | 
+<img src="https://user-images.githubusercontent.com/31005114/112102873-e0c86a80-8be3-11eb-9571-f4e483d2b30e.jpeg" heght="200"/> | 
+
 
 ## Getting Started
 
