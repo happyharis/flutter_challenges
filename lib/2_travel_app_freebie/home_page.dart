@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_card_swipper/flutter_card_swiper.dart';
 import 'package:flutter_challenges/2_travel_app_freebie/details_page.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -10,39 +9,36 @@ class HomePage extends StatelessWidget {
     final width = MediaQuery.of(context).size.width;
 
     final cardHeight = (375 / 812) * height;
-    return DefaultTextStyle(
-      style: GoogleFonts.raleway(),
-      child: Scaffold(
-        body: Column(
-          children: [
-            SizedBox(
-              height: cardHeight + 100,
-              child: Swiper(
-                reverse: true,
-                itemCount: 2,
-                itemHeight: cardHeight,
-                itemWidth: width,
-                scrollDirection: Axis.vertical,
-                layout: SwiperLayout.STACK,
-                onTap: (index) {
-                  final imagePath = index.isEven ? jasper : canada;
-                  Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) {
-                      return DetailsPage(imagePath: imagePath);
-                    },
-                  ));
-                },
-                itemBuilder: (context, index) {
-                  final imagePath = index.isEven ? jasper : canada;
-                  return ImageCard(
-                    imagePath: imagePath,
-                    cardHeight: cardHeight,
-                  );
-                },
-              ),
-            )
-          ],
-        ),
+    return Scaffold(
+      body: Column(
+        children: [
+          SizedBox(
+            height: cardHeight + 100,
+            child: Swiper(
+              reverse: true,
+              itemCount: 2,
+              itemHeight: cardHeight,
+              itemWidth: width,
+              scrollDirection: Axis.vertical,
+              layout: SwiperLayout.STACK,
+              onTap: (index) {
+                final imagePath = index.isEven ? jasper : canada;
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) {
+                    return DetailsPage(imagePath: imagePath);
+                  },
+                ));
+              },
+              itemBuilder: (context, index) {
+                final imagePath = index.isEven ? jasper : canada;
+                return ImageCard(
+                  imagePath: imagePath,
+                  cardHeight: cardHeight,
+                );
+              },
+            ),
+          )
+        ],
       ),
     );
   }
@@ -108,20 +104,12 @@ class ImageCard extends StatelessWidget {
               children: [
                 Text(
                   'Jasper National Park',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.w900,
-                    color: Colors.white,
-                  ),
+                  style: Theme.of(context).textTheme.headline2,
                 ),
                 SizedBox(height: 6.5),
                 Text(
                   'Alberta, Canada',
-                  style: TextStyle(
-                    fontSize: 13,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.white,
-                  ),
+                  style: Theme.of(context).textTheme.subtitle1,
                 ),
               ],
             ),
