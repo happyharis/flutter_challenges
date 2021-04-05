@@ -110,7 +110,7 @@ class ModelDescriptionBox extends StatelessWidget {
 
 class FilledCircleAddIcon extends StatelessWidget {
   const FilledCircleAddIcon({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -137,8 +137,8 @@ const imageUrl =
     'https://images.unsplash.com/photo-1615212863630-1691e4c99c15?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=934&q=80';
 
 class IconButtonData {
-  final IconData icon;
-  final int amount;
+  final IconData? icon;
+  final int? amount;
 
   IconButtonData({this.icon, this.amount});
 }
