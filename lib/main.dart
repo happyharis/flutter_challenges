@@ -1,9 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_challenges/2_travel_app_freebie/home_page.dart';
+import 'package:flutter_challenges/3_ios_insta_profile/profile_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(InstaApp());
+}
+
+class InstaApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Insta App',
+      theme: ThemeData(fontFamily: 'SF Pro'),
+      home: InstaProfilePage(),
+    );
+  }
 }
 
 class MyApp extends StatelessWidget {

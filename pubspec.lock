@@ -181,6 +181,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.11.0"
+  pixel_perfect:
+    dependency: "direct main"
+    description:
+      name: pixel_perfect
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.0.7"
   platform:
     dependency: transitive
     description:
